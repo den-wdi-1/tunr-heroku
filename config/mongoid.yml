@@ -1,0 +1,11 @@
+development:
+  sessions:
+    default:
+      database: mongoid
+      hosts:
+        - localhost:27017
+  clients:
+    default:
+      database: mongoid
+      hosts:
+        - localhost:27017

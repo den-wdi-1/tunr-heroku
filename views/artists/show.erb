@@ -1,0 +1,8 @@
+<h2><%= @artist.name %></h2>
+<h3><%= @artist.nationality %></h3>
+<h3><%= @artist.instrument %></h3>
+<h3>Address</h3>
+<p><%= @artist.home_address.street %><br />
+<%= "#{@artist.home_address.city}, #{@artist.home_address.state} #{@artist.home_address.country}" %></p>
+
+<img src="<%= @artist.photo_url %>" height="300" width="300">
