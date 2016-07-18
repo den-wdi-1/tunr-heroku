@@ -14,7 +14,7 @@ production:
     default:
       uri: <%= ENV['MONGODB_URI'] %>
       options:
-        safe: true
+        raise_not_found_error: false
   clients:
     default:
       uri: <%= ENV['MONGODB_URI'] %>
