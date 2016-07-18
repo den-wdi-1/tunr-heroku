@@ -2,9 +2,6 @@ require 'rubygems'
 require 'bundler'
 Bundler.require
 
-environment = ENV['RACK_ENV'] || 'development'
-Mongoid.load!("config/mongoid.yml", environment)
-
 # Models
 require './models/artist'
 require './models/home_address'
