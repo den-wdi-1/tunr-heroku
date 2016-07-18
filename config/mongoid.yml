@@ -12,7 +12,7 @@ development:
 production:
   sessions:
     default:
-      uri: ENV['MONGODB_URI']
+      uri: <%= ENV['MONGODB_URI'] %>
   clients:
     default:
-      uri: ENV['MONGODB_URI'] %>
+      uri: <%= ENV['MONGODB_URI'] %>
