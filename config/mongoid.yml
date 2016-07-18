@@ -9,3 +9,14 @@ development:
       database: mongoid
       hosts:
         - localhost:27017
+production:
+  sessions:
+    default:
+      database: mongoid
+      hosts:
+        - <%= ENV['MONGODB_URI'] %>
+  clients:
+    default:
+      database: mongoid
+      hosts:
+        - <%= ENV['MONGODB_URI'] %>
