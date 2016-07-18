@@ -1,6 +1,4 @@
 class Tunr < Sinatra::Base
-  p "Rack Environment #{ENV[]}"
-
  #  configure do
 	# Mongoid.load! "#{File.dirname(__FILE__)}/config/mongoid.yml"
  #  end
