@@ -2,14 +2,16 @@
 
 #Tunr-Heroku
 
-This repo shows a pair of ways to deploy 
+This repo shows a pair of ways to deploy tunr to Heroku. It focuses on 
+a couple potential issues that can arise when using ERB forms or
+MongoDB.
 
 ## Master Branch
 On the master branch, implements method_override to enable.
 
 Web browsers only implement the 'GET' and 'POST' method. To use the 
 standard HTTP verbs we need to make a few changes. The first is in 
-our Siantra controller we need to include
+our Sinatra controller we need to include
 
 ```ruby
   set :method_override, true
@@ -34,8 +36,9 @@ through the standard HTTP verbs.
 A similar method allows us to send ``PUT`` requests via forms.
 
 ## Mongoid Branch
-This branch shows how to deploy a Siantra application backed by MongoDb
-using the Mongoid gem. The code shows a 
+This branch shows how to deploy a Sinatra application backed by MongoDb
+using the Mongoid gem. The code shows the changes to implement an 
+embedded model in MongoDB.
 
 This code does not implement the method_override Sinatra setting.
 
