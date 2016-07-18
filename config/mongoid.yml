@@ -12,11 +12,7 @@ development:
 production:
   sessions:
     default:
-      database: mongoid
-      hosts:
-        - <%= ENV['MONGODB_URI'] %>
+      uri: ENV['MONGODB_URI']
   clients:
     default:
-      database: mongoid
-      hosts:
-        - <%= ENV['MONGODB_URI'] %>
+      uri: ENV['MONGODB_URI'] %>
