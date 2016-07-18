@@ -2,6 +2,8 @@ require 'rubygems'
 require 'bundler'
 Bundler.require
 
+Mongoid.load! './config/mongoid.yml'
+
 # Models
 require './models/artist'
 require './models/home_address'
