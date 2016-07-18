@@ -21,7 +21,8 @@
       </li>
       <li>
         <li>
-          <form method="/artists/<%= artist.id %>/delete" action="post">
+          <form method="post" action="/artists/<%= artist.id %>">  
+            <input name="_method" value="DELETE" type="hidden"/>
             <button>Delete</button>
           </form>
         </li>

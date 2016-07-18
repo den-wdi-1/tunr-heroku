@@ -1,5 +1,7 @@
 class Tunr < Sinatra::Base
 
+  set :method_override, true
+
   # RESTful Artist Controller Actions
   # index
   get '/artists' do
@@ -39,14 +41,14 @@ class Tunr < Sinatra::Base
   put '/artists/:id' do
     @artist = Artist.find(params[:id])
     if @artist.update_attributes(params[:artist])
-      redirect("/artists/#{artist.id}")
+      redirect("/artists/#{@artist.id}")
     else
       erb(:"artists/edit")
     end
   end
 
   # delete
-  delete '/artists/:id/delete' do
+  delete '/artists/:id' do
     @artist = Artist.find(params[:id])
     if @artist.destroy
       redirect('/artists')

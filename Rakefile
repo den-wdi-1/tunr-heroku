@@ -1,8 +1,6 @@
-import "#{`bundle show mongoid`.strip}/lib/mongoid/tasks/database.rake"
+require "sinatra/activerecord"
+require "sinatra/activerecord/rake"
 
-namespace 'db' do
-  desc 'Run the db/seeds.rb file'
-  task :seeds do
-    load('./db/seeds.rb')
-  end
+namespace :db do
+  task :load_config
 end
